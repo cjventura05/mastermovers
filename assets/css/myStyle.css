@@ -1,0 +1,727 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+}
+
+h1 {
+    font-size: 50px;
+    line-height: 64px;
+    color: #E33530;
+}
+
+h2 {
+    font-size: 46px;
+    line-height: 54px;
+    color: #E33530;
+}
+
+h3 {
+    color: #064C81;
+}
+
+h4 {
+    font-size: 20px;
+    color: #E33530;
+}
+
+h6 {
+    font-weight: 700;
+    font-size: 12px;
+    color: #064C81;
+}
+
+p {
+    font-size: 16px;
+    color: #E33530;
+    margin: 15px 0 20px 0;
+}
+
+.section-p1 {
+    padding: 40px 80px;
+}
+
+.section-m1 {
+    margin: 40px 0;
+}
+
+body {
+    width: 100%;
+}
+
+/* header */
+.logo {
+    height: 60px;
+    width: 240px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 10px 5px;
+    background-color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+    z-index: 99;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-left: 30px;
+}
+
+.title h3 {
+    font-size: 25px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav a {
+    text-decoration: none;
+    padding: 0 20px;
+    color: #064C81;
+    font-size: 18px;
+    font-weight: 600;
+    transition: 0.3s ease;
+    position: relative;
+}
+
+nav a:hover,
+nav a.active {
+    color: #BE2424;
+}
+
+/*
+nav a.active::after,
+nav a:hover::after {
+    content: "";
+    width: 30%;
+    height: 2px;
+    background: #BE2424;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
+*/
+
+/* Landing Page Banner */
+
+#landBanner {
+    background-image: url("../img/intro-banner.jpg");
+    height: 90vh;
+    width: 100%;
+    background-size: cover;
+    background-position: top 30% right 0;
+    padding: 0 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#landBanner h1 {
+    color: #ffffff;
+    text-shadow: 2px 2px 4px gray;
+}
+
+#landBanner h2 {
+    color: white;
+    text-shadow: 2px 2px 4px gray;
+}
+
+#landBanner h4 {
+    padding-bottom: 15px;
+    color: white;
+    text-shadow: 2px 2px 4px gray;
+}
+
+#landBanner p {
+    color: white;
+    text-shadow: 2px 2px 4px gray;
+}
+
+#landBanner button {
+    background-image: url("../img/button.png");
+    background-color: transparent;
+    background-repeat: no-repeat;
+    color: white;
+    padding: 50px 60px 50px 75px;
+    font-size: 30px;
+    font-weight: 700;
+    border: 0;
+}
+
+/* Search Location Section*/
+#loc {
+    display: flex;
+    padding: 20px;
+    background-color: #65AFE8;
+}
+
+#loc form {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 15px;
+    border: 2px solid #E33530;
+    border-radius: 25px;
+    margin: auto;
+    background-color: white;
+}
+
+#searchLoc {
+    border: none;
+    padding: 2px 200px 2px 5px;
+    outline: none;
+    color: #E33530;
+}
+
+#searchLocForm input#searchLoc::-webkit-input-placeholder {
+    color: #E33530;
+}
+
+#searchLocForm input#searchLoc::-moz-placeholder {
+    color: #E33530;
+}
+
+#searchLocForm input#searchLoc:-moz-placeholder {
+    color: #E33530;
+}
+
+#searchLocForm input#searchLoc:-ms-input-placeholder {
+    color: #E33530;
+}
+
+#locate {
+    justify-content: flex-end;
+    background-color: transparent;
+    border: none;
+    color: #E33530;
+}
+
+/* Location Zone */
+
+/* Design 1
+#zone {
+    padding-bottom: 60px;
+}
+
+#zone h2 {
+    display: flex;
+    justify-content: center;
+}
+
+.head2 {
+    border: 2px solid #E33530;
+    background-color: white;
+    margin-bottom: 50px;
+    border-radius: 15px;
+}
+
+.city-wrapper .city-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+.city-list li {
+    padding-top: 15px;
+    margin-left: 4px;
+}
+
+.city-wrapper {
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+.city {
+    text-decoration: none;
+}
+
+.card {
+    height: 200px;
+    width: 200px;
+    border-radius: 4px;
+
+    display: grid;
+    place-items: center;
+    grid-template-areas: "main";
+
+    overflow: hidden;
+    cursor: pointer;
+    text-decoration: none;
+    position: relative;
+}
+
+.card>* {
+    grid-area: main;
+}
+
+.card>.img-place {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    transition: transform 400ms, filter 400ms;
+}
+
+.card>.caption {
+    opacity: 0;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px gray;
+    font-size: 1.8em;
+    transition: transform 400ms, filter 400ms;
+}
+
+.card:is(:hover, :focus)>.img-place {
+    transform: scale(1.1);
+    filter: brightness(0.4);
+}
+
+.card:is(:hover, :focus)>.caption {
+    transform: scale(1.2);
+    opacity: 1;
+}
+
+*/
+
+/* city card design 2 
+
+#zone {
+    background-color: #064C81;
+}
+
+strong {
+    font-weight: 900;
+}
+
+.wrapper-city {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.wrapper-city .canvas+.canvas {
+    margin-left: 40px;
+}
+
+.canvas {
+    position: relative;
+    display: block;
+    width: 150px;
+    height: 200px;
+    padding: 20px;
+    text-decoration: none;
+    border-radius: 40px;
+}
+
+.canvas_img-wrapper>.canvas-img {
+    height: 100%;
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    transition: transform 400ms, filter 400ms;
+}
+
+.canvas_img-wrapper {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform: rotate(-10deg) skew(-10deg);
+    overflow: hidden;
+    background: white;
+}
+
+.canvas_img {
+    transform: scale3d(.9, .9, .9);
+    opacity: 3;
+    max-width: 250px;
+    max-height: 250px;
+}
+
+.canvas_copy {
+    position: absolute;
+    bottom: 0;
+    left: 85%;
+    text-transform: uppercase;
+    color: #fffb14;
+    z-index: 100;
+}
+
+.canvas_copy--left {
+    left: -25%;
+}
+
+.canvas_copy_title {
+    font-size: 28px;
+    display: block;
+    transform: translateX(-25px);
+    transition: all 0.75s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0s;
+    color: white;
+}
+
+.canvas_copy_title:nth-child(1) {
+    transition-delay: 0.1s;
+}
+
+.canvas_copy_title:nth-child(2) {
+    transition-delay: 0.2s;
+}
+
+.canvas_copy_subtitle {
+    display: block;
+    transform: rotate(270deg) translateY(-100%) translateX(calc(-100% - 30px));
+    transform-origin: top left;
+    position: absolute;
+    left: 0;
+    top: 4px;
+    font-size: 24px;
+    font-weight: 900;
+    transition: all 0.75s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.35s;
+}
+
+.canvas_copy_details {
+    display: block;
+    transition: all 0.75s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.14s;
+    transform: translateX(3px);
+}
+
+.canvas_img-wrapper,
+.canvas_img {
+    transition: all 0.25s ease-in-out 0s;
+}
+
+.canvas_img-wrapper {
+    transform: rotate(-10deg) skew(-10deg);
+}
+
+.canvas_copy_title,
+.canvas_copy_subtitle,
+.canvas_copy_details {
+    opacity: 0;
+}
+
+.canvas:hover .canvas_copy_title,
+.canvas:hover .canvas_copy_subtitle,
+.canvas:hover .canvas_copy_details,
+.canvas:hover .canvas_img {
+    opacity: 1;
+}
+
+.canvas:hover,
+.canvas:hover .canvas_img-wrapper {
+    transform: rotate(-14deg) skew(-14deg) scale(0.96);
+}
+
+.canvas:hover .canvas_img {
+    transform: scale3d(1, 1, 1);
+}
+
+.canvas:hover .canvas_copy_title,
+.canvas:hover .canvas_copy_details {
+    transform: translateX(0);
+}
+
+.canvas:hover .canvas_copy_subtitle {
+    transform: rotate(270deg) translateY(-100%) translateX(-100%);
+}
+
+.canvas:hover .rect-gradient {
+    animation: draw-line 3s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+}
+
+*/
+
+/*city card design 3*/
+
+#zone {
+    display: flex;
+    align-self: center;
+}
+
+.head2 {
+    margin-bottom: 50px;
+}
+
+.transition {
+    transition: .3s cubic-bezier(.3, 0, 0, 1.3);
+}
+
+.card {
+    background-color: #ffffff;
+    bottom: 0;
+    box-shadow: 0px 0px 0px 10px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 0px 0px 10px 2px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0px 0px 0px 10px 2px rgba(0, 0, 0, 0.3);
+    height: 300px;
+    left: 0;
+    margin: auto;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 300px;
+
+}
+
+.card:hover {
+    height: 450px;
+    width: 300px;
+}
+
+.card:hover .visit_container {
+    display: inline;
+    margin-top: 380px;
+}
+
+.card:hover .card_circle {
+    background-size: cover;
+    border-radius: 0;
+    margin-top: -130px;
+}
+
+.card:hover h2 {
+    background: #65AFE8;
+    color: #ffffff;
+    margin-top: 100px;
+    padding: 5px;
+}
+
+
+.card:hover h2 small {
+    color: #ffffff;
+}
+
+.card:hover p {
+    margin-top: 300px;
+}
+
+.card_circle {
+    background: url("../img/las-pinas.jpg") no-repeat center bottom;
+    background-color: #E33530;
+    background-size: cover;
+    border-radius: 50%;
+    height: 400px;
+    margin-left: -75px;
+    margin-top: -270px;
+    position: absolute;
+    width: 450px;
+}
+
+.card h2 {
+    color: #65AFE8;
+    font-size: 24px;
+    font-weight: 200px;
+    margin-top: 150px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    z-index: 9999;
+}
+
+.card p {
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 100%;
+    font-weight: normal;
+    margin-top: 200px;
+    position: absolute;
+    text-align: center;
+    z-index: 9999;
+}
+
+.visit_container {
+    display: none;
+    margin-top: 320px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    z-index: 9999;
+}
+
+.vstore {
+    -moz-border-radius: 2px;
+    -moz-transition: 0.2s ease-out;
+    -ms-transition: 0.2s ease-out;
+    -o-transition: 0.2s ease-out;
+    -webkit-border-radius: 2px;
+    -webkit-transition: 0.2s ease-out;
+    background-clip: padding-box;
+    border: 2px solid #064C81;
+    border-radius: 2px;
+    color: #65AFE8;
+    display: inline-block;
+    font-size: 17px;
+    font-weight: 400;
+    height: 36px;
+    letter-spacing: 0.5px;
+    line-height: 36px;
+    margin-bottom: 15px;
+    padding: 0 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.2s ease-out;
+}
+
+.visit_container:hover {
+    background-color: #3487f7;
+    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    color: #fff;
+    -moz-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+
+/* details */
+#why {
+    display: flex;
+    background-color: #eecaca;
+    padding: 30px 70px;
+    flex-wrap: wrap;
+}
+
+#why h2 {
+    margin: auto;
+    padding-bottom: 2rem;
+}
+
+#why article h4,
+p {
+    color: black;
+}
+
+/* Join Us */
+
+#join {
+    padding-top: 60px;
+    background-image: url("../img/Map.jpg");
+    padding-bottom: 250px;
+}
+
+.solid-header {
+    background-color: #E33530;
+    width: 600px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+
+#join h2 {
+    color: white;
+
+}
+
+.partner-wrapper .join-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    justify-content: center;
+}
+
+.join-text {
+    text-decoration: none;
+}
+
+.join-card {
+    text-align: center;
+    margin: 30px
+}
+
+.img-join {
+    height: 250px;
+    width: 250px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 4px;
+    padding: 15px;
+    display: grid;
+    border: 5px solid #064C81;
+}
+
+.img-join>img {
+    position: absolute;
+    z-index: 1;
+    inset: 0;
+
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+
+    transition: transform 200ms;
+}
+
+.solid-text {
+    background-color: #E33530;
+    margin-top: 5px;
+    border-radius: 25px;
+    padding: 5px;
+}
+
+.solid-text h3 {
+    color: white;
+}
+
+.img-join:hover>img {
+    transform: scale(1.05);
+}
+
+/* Download Section */
+
+.upper {
+    background-color: white;
+    padding-top: 100px;
+    margin-top: 80px;
+}
+
+.lower {
+    background-color: #064C81;
+    height: 213px;
+}
+
+.image-qr {
+    width: 250px;
+    height: 250px;
+}
+
+image-qr>img {
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+
+    transition: transform 200ms;
+}
+
+.lower img {
+    position: relative;
+    bottom: 200px;
+    width: 300px;
+    left: 260px;
+}
+
+.download-details {
+    display: inline;
+}
+
+.lower h4 {}
