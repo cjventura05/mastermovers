@@ -1,0 +1,1606 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+}
+
+h1 {
+    font-size: 50px;
+    line-height: 64px;
+    color: #E33530;
+}
+
+h2 {
+    font-size: 46px;
+    line-height: 54px;
+    color: #E33530;
+}
+
+h3 {
+    color: #064C81;
+}
+
+h4 {
+    font-size: 20px;
+    color: #E33530;
+}
+
+h6 {
+    font-weight: 700;
+    font-size: 12px;
+    color: #064C81;
+}
+
+p {
+    font-size: 16px;
+    color: #E33530;
+    margin: 15px 0 20px 0;
+}
+
+.section-p1 {
+    padding: 40px 80px;
+}
+
+.section-m1 {
+    margin: 40px 0;
+}
+
+body {
+    width: 100%;
+}
+
+/* header */
+.logo {
+    height: 85px;
+    width: 100px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 10px 5px;
+    background-color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+    z-index: 99;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-left: 30px;
+}
+
+.title h3 {
+    font-size: 25px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav a {
+    text-decoration: none;
+    padding: 0 20px;
+    color: #064C81;
+    font-size: 18px;
+    font-weight: 600;
+    transition: 0.3s ease;
+    position: relative;
+}
+
+nav button {
+    color: #064C81;
+    background-color: transparent;
+    border: none;
+}
+
+nav button:hover {
+    color: #BE2424;
+}
+
+nav a:hover,
+nav a.active {
+    color: #BE2424;
+}
+
+/*
+nav a.active::after,
+nav a:hover::after {
+    content: "";
+    width: 30%;
+    height: 2px;
+    background: #BE2424;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
+*/
+
+/* Landing Page Banner */
+
+#landBanner {
+    background-image: url("../img/intro-banner.jpg");
+    height: 90vh;
+    width: 100%;
+    background-size: cover;
+    background-position: top 30% right 0;
+    padding: 0 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#landBanner h1 {
+    color: #ffffff;
+    text-shadow: 2px 2px 4px gray;
+}
+
+#landBanner h2 {
+    color: white;
+    text-shadow: 2px 2px 4px gray;
+}
+
+#landBanner h4 {
+    padding-bottom: 15px;
+    color: white;
+    text-shadow: 2px 2px 4px gray;
+}
+
+#landBanner p {
+    color: white;
+    text-shadow: 2px 2px 4px gray;
+}
+
+#landBanner button {
+    background-image: url("../img/button.png");
+    background-color: transparent;
+    background-repeat: no-repeat;
+    color: white;
+    padding: 50px 60px 50px 75px;
+    font-size: 30px;
+    font-weight: 700;
+    border: 0;
+}
+
+/* Search Location Section*/
+#loc {
+    display: flex;
+    padding: 20px;
+    background-color: #65AFE8;
+}
+
+#loc form {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 15px;
+    border: 2px solid #E33530;
+    border-radius: 25px;
+    margin: auto;
+    background-color: white;
+}
+
+#searchLoc {
+    border: none;
+    padding: 2px 200px 2px 5px;
+    outline: none;
+    color: #E33530;
+}
+
+#searchLocForm input#searchLoc::-webkit-input-placeholder {
+    color: #E33530;
+}
+
+#searchLocForm input#searchLoc::-moz-placeholder {
+    color: #E33530;
+}
+
+#searchLocForm input#searchLoc:-moz-placeholder {
+    color: #E33530;
+}
+
+#searchLocForm input#searchLoc:-ms-input-placeholder {
+    color: #E33530;
+}
+
+#locate {
+    justify-content: flex-end;
+    background-color: transparent;
+    border: none;
+    color: #E33530;
+}
+
+/* Location Zone */
+
+/* Design 1
+#zone {
+    padding-bottom: 60px;
+}
+
+#zone h2 {
+    display: flex;
+    justify-content: center;
+}
+
+.head2 {
+    border: 2px solid #E33530;
+    background-color: white;
+    margin-bottom: 50px;
+    border-radius: 15px;
+}
+
+.city-wrapper .city-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+.city-list li {
+    padding-top: 15px;
+    margin-left: 4px;
+}
+
+.city-wrapper {
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+.city {
+    text-decoration: none;
+}
+
+.card {
+    height: 200px;
+    width: 200px;
+    border-radius: 4px;
+
+    display: grid;
+    place-items: center;
+    grid-template-areas: "main";
+
+    overflow: hidden;
+    cursor: pointer;
+    text-decoration: none;
+    position: relative;
+}
+
+.card>* {
+    grid-area: main;
+}
+
+.card>.img-place {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    transition: transform 400ms, filter 400ms;
+}
+
+.card>.caption {
+    opacity: 0;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px gray;
+    font-size: 1.8em;
+    transition: transform 400ms, filter 400ms;
+}
+
+.card:is(:hover, :focus)>.img-place {
+    transform: scale(1.1);
+    filter: brightness(0.4);
+}
+
+.card:is(:hover, :focus)>.caption {
+    transform: scale(1.2);
+    opacity: 1;
+}
+
+*/
+
+/* city card design 2 
+
+#zone {
+    background-color: #064C81;
+}
+
+strong {
+    font-weight: 900;
+}
+
+.wrapper-city {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.wrapper-city .canvas+.canvas {
+    margin-left: 40px;
+}
+
+.canvas {
+    position: relative;
+    display: block;
+    width: 150px;
+    height: 200px;
+    padding: 20px;
+    text-decoration: none;
+    border-radius: 40px;
+}
+
+.canvas_img-wrapper>.canvas-img {
+    height: 100%;
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    transition: transform 400ms, filter 400ms;
+}
+
+.canvas_img-wrapper {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform: rotate(-10deg) skew(-10deg);
+    overflow: hidden;
+    background: white;
+}
+
+.canvas_img {
+    transform: scale3d(.9, .9, .9);
+    opacity: 3;
+    max-width: 250px;
+    max-height: 250px;
+}
+
+.canvas_copy {
+    position: absolute;
+    bottom: 0;
+    left: 85%;
+    text-transform: uppercase;
+    color: #fffb14;
+    z-index: 100;
+}
+
+.canvas_copy--left {
+    left: -25%;
+}
+
+.canvas_copy_title {
+    font-size: 28px;
+    display: block;
+    transform: translateX(-25px);
+    transition: all 0.75s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0s;
+    color: white;
+}
+
+.canvas_copy_title:nth-child(1) {
+    transition-delay: 0.1s;
+}
+
+.canvas_copy_title:nth-child(2) {
+    transition-delay: 0.2s;
+}
+
+.canvas_copy_subtitle {
+    display: block;
+    transform: rotate(270deg) translateY(-100%) translateX(calc(-100% - 30px));
+    transform-origin: top left;
+    position: absolute;
+    left: 0;
+    top: 4px;
+    font-size: 24px;
+    font-weight: 900;
+    transition: all 0.75s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.35s;
+}
+
+.canvas_copy_details {
+    display: block;
+    transition: all 0.75s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.14s;
+    transform: translateX(3px);
+}
+
+.canvas_img-wrapper,
+.canvas_img {
+    transition: all 0.25s ease-in-out 0s;
+}
+
+.canvas_img-wrapper {
+    transform: rotate(-10deg) skew(-10deg);
+}
+
+.canvas_copy_title,
+.canvas_copy_subtitle,
+.canvas_copy_details {
+    opacity: 0;
+}
+
+.canvas:hover .canvas_copy_title,
+.canvas:hover .canvas_copy_subtitle,
+.canvas:hover .canvas_copy_details,
+.canvas:hover .canvas_img {
+    opacity: 1;
+}
+
+.canvas:hover,
+.canvas:hover .canvas_img-wrapper {
+    transform: rotate(-14deg) skew(-14deg) scale(0.96);
+}
+
+.canvas:hover .canvas_img {
+    transform: scale3d(1, 1, 1);
+}
+
+.canvas:hover .canvas_copy_title,
+.canvas:hover .canvas_copy_details {
+    transform: translateX(0);
+}
+
+.canvas:hover .canvas_copy_subtitle {
+    transform: rotate(270deg) translateY(-100%) translateX(-100%);
+}
+
+.canvas:hover .rect-gradient {
+    animation: draw-line 3s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+}
+
+*/
+
+/* city card design 3
+
+#zone {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.head2 {
+    display: flex;
+    position: relative;
+    margin: auto;
+}
+
+.city-wrapper {
+    position: relative;
+    display: flex;
+    padding-bottom: 500px;
+}
+
+.transition {
+    transition: .3s cubic-bezier(.3, 0, 0, 1.3)
+}
+
+.card {
+    background-color: #fff;
+    bottom: 0;
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.3);
+    height: 300px;
+    left: 0;
+    margin: auto;
+    overflow: hidden;
+    position: absolute;
+    left: 0px;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 300px;
+
+}
+
+.card:hover {
+    height: 450px;
+    width: 300px;
+}
+
+.card:hover .visit_container {
+    display: inline;
+    margin-top: 380px;
+}
+
+.card:hover .card_circle {
+    background-size: cover;
+    border-radius: 0;
+    margin-top: -130px;
+}
+
+.card:hover h2 {
+    background: #3487f7;
+    color: #fff;
+    margin-top: 100px;
+    padding: 5px;
+}
+
+.card:hover h2 small {
+    color: #fff
+}
+
+.card:hover p {
+    margin-top: 300px
+}
+
+.card_circle {
+    background: url('../img/las-pinas.jpg') no-repeat center bottom;
+    background-color: #3487f7;
+    background-size: cover;
+    border-radius: 50%;
+    height: 400px;
+    margin-left: -75px;
+    margin-top: -270px;
+    position: absolute;
+    width: 450px;
+}
+
+.card h2 {
+    color: #3487f7;
+    font-family: 'Raleway', sans-serif;
+    font-size: 24px;
+    font-weight: 200;
+    margin-top: 150px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    z-index: 9999;
+}
+
+.card p {
+    color: rgba(0, 0, 0, .6);
+    font-family: 'Raleway', sans-serif;
+    font-size: 100%;
+    font-weight: normal;
+    margin-top: 200px;
+    position: absolute;
+    text-align: center;
+    z-index: 9999;
+}
+
+.visit_container {
+    display: none;
+    margin-top: 320px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    z-index: 9999;
+}
+
+.vstore {
+    -moz-border-radius: 2px;
+    -moz-transition: 0.2s ease-out;
+    -ms-transition: 0.2s ease-out;
+    -o-transition: 0.2s ease-out;
+    -webkit-border-radius: 2px;
+    -webkit-transition: 0.2s ease-out;
+    background-clip: padding-box;
+    border: 2px solid #3487f7;
+    border-radius: 2px;
+    color: #3487f7;
+    display: inline-block;
+    font-family: 'Raleway', sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    height: 36px;
+    letter-spacing: 0.5px;
+    line-height: 36px;
+    margin-bottom: 15px;
+    padding: 0 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.2s ease-out;
+}
+
+.vstore:hover {
+    background-color: #3487f7;
+    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    color: #fff;
+    -moz-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+*/
+
+/* city design 3 */
+
+#zone {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: center;
+}
+
+.head2 {
+    display: flex;
+    position: relative;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+.city-wrap {
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.card {
+    position: relative;
+    height: 250px;
+    width: 200px;
+    transition: 0.5s;
+    border-radius: 20px;
+    margin: 19px;
+}
+
+
+.face {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.city-list {
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+}
+
+.city-list li {
+    display: flex;
+    margin-left: 10px;
+}
+
+.city_img {
+    height: 100%;
+    border-radius: 20px;
+}
+
+.card>.city_img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    transition: transform 400ms, filter 400ms;
+}
+
+.face1 {
+    text-align: center;
+    padding: 20px;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+
+.face1 h3 {
+    text-transform: uppercase;
+    margin-top: 60px;
+    color: white;
+}
+
+.face1 p {
+    text-align: center;
+    padding: 10px 10px;
+    margin-top: 100px;
+    color: white;
+    font-size: 13px;
+}
+
+.face2 {
+    text-transform: uppercase;
+    border-radius: 20px;
+    transition: 0.5s;
+    background-color: #E33530;
+}
+
+.face2nextline {
+    text-transform: uppercase;
+    border-radius: 20px;
+    transition: 0.5s;
+    background-color: #064C81;
+}
+
+.face2 h3,
+.face2nextline h3 {
+    color: white;
+    transition: 0.5s;
+    font-size: 14px;
+}
+
+.card:hover .face2,
+.card:hover .face2nextline {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    top: 20px;
+    left: 62px;
+}
+
+.card:hover .face1 {
+    background-color: rgba(6, 76, 129, 0.5);
+}
+
+/* details */
+.why {
+    display: flex;
+    background-color: #eecaca;
+    padding: 30px 70px;
+    flex-wrap: wrap;
+}
+
+.why h2 {
+    margin: auto;
+    padding-bottom: 2rem;
+    text-align: center;
+    font-size: 36px;
+    text-transform: uppercase;
+}
+
+.why article h4,
+p {
+    color: black;
+}
+
+.art-img img {
+    width: 120px;
+}
+
+.why article {
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    gap: 25px;
+}
+
+.why art-details {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+
+/* Join Us */
+
+#join {
+    padding-top: 60px;
+    background-image: url("../img/Map.jpg");
+    padding-bottom: 250px;
+}
+
+.solid-header {
+    background-color: #E33530;
+    width: 600px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+
+#join h2 {
+    color: white;
+
+}
+
+.partner-wrapper .join-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    justify-content: center;
+}
+
+.join-text {
+    text-decoration: none;
+}
+
+.join-card {
+    text-align: center;
+    margin: 30px
+}
+
+.img-join {
+    height: 250px;
+    width: 250px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 4px;
+    padding: 15px;
+    display: grid;
+    border: 5px solid #064C81;
+}
+
+.img-join>img {
+    position: absolute;
+    z-index: 1;
+    inset: 0;
+
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+
+    transition: transform 200ms;
+}
+
+.solid-text {
+    background-color: #E33530;
+    margin-top: 5px;
+    border-radius: 25px;
+    padding: 5px;
+}
+
+.solid-text h3 {
+    color: white;
+}
+
+.img-join:hover>img {
+    transform: scale(1.05);
+}
+
+/* Download Section */
+
+#download-section {
+    background-color: #064C81;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 50px;
+    height: 300px;
+}
+
+.img-wrapper {
+    display: flex;
+    position: relative;
+    margin-left: 30px;
+}
+
+.extended-img {
+    position: absolute;
+    width: 300px;
+    bottom: 0px;
+    left: 0px;
+}
+
+.download-info {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 880px;
+    margin-right: 150px;
+}
+
+.download-info h2 {
+    display: flex;
+    font-size: 40px;
+    color: white;
+    margin: auto;
+}
+
+.download-info h4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    text-align: center;
+    font-size: 28px;
+    color: white;
+    font-weight: lighter;
+    padding-right: 10px;
+}
+
+.appstore {
+    margin-top: 50px;
+}
+
+/* footer section */
+footer {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    margin-bottom: 50px;
+}
+
+.footer-logo {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    margin-top: 20px;
+    width: 200px;
+}
+
+.download-links {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    width: 600px;
+}
+
+.download-links h3 {
+    color: #064C81;
+    font-size: 26px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.download-links img {
+    margin: 5px;
+    width: 200px;
+}
+
+.socmed-link {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.socmed-link a {
+    text-decoration: none;
+}
+
+.socmed-link h3 {
+    color: #064C81;
+    font-size: 26px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.socmed-icon {
+    width: 100px;
+    height: 65px;
+}
+
+.icon-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 450px;
+}
+
+.icon-links img {
+    padding: 5px;
+    width: 80px;
+}
+
+.my-account-panel {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    height: 160px;
+}
+
+.my-account-panel h4 {
+    font-size: 25px;
+}
+
+.my-account-panel a {
+    text-decoration: none;
+    font-size: 20px;
+    color: #064C81;
+}
+
+.quick-links-panel {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    height: 220px;
+}
+
+.quick-links-panel h4 {
+    font-size: 25px;
+}
+
+.quick-links-panel a {
+    text-decoration: none;
+    font-size: 20px;
+    color: #064C81;
+}
+
+
+/* ============================ Business Page =====================================*/
+#businessBanner {
+    background-image: url("../img/business-banner.jpg");
+    height: 60vh;
+    width: 100%;
+    background-size: cover;
+    background-position: top 30% right 0;
+    padding: 0 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#businessBanner h1 {
+    font-size: 100px;
+    line-height: 100px;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px gray;
+    margin-bottom: 10px;
+}
+
+#businessBanner h2 {
+    color: white;
+    text-shadow: 2px 2px 4px gray;
+}
+
+#businessBanner h3 {
+    font-size: 30px;
+    color: white;
+    text-shadow: 2px 2px 4px gray;
+}
+
+#businessBanner h4 {
+    padding-bottom: 15px;
+    color: white;
+    text-shadow: 2px 2px 4px gray;
+}
+
+#businessBanner p {
+    color: white;
+    text-shadow: 2px 2px 4px gray;
+}
+
+#phone-instruction {
+    width: 450px;
+}
+
+.instructions-sect {
+    margin-top: 50px;
+
+}
+
+.instruction-img img {
+    height: 450px;
+    width: 230px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.be-One {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 50px 10px;
+}
+
+.instruction-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    text-align: start;
+    margin-left: 20px;
+}
+
+.instruction-details p {
+    font-size: 17px;
+}
+
+.instruction-details ol {
+    margin-left: 30px;
+}
+
+.solid-business-header {
+    background-color: #E33530;
+    width: 600px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    margin-bottom: 30px;
+    font-size: 36px;
+    color: white;
+}
+
+.solid-business-header h2 {
+    font-size: 36px;
+    color: white;
+}
+
+.solid-business-header2 {
+    background-color: #064C81;
+    width: 600px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    margin-bottom: 30px;
+    font-size: 36px;
+    color: white;
+}
+
+.solid-business-header2 h2 {
+    font-size: 36px;
+    color: white;
+}
+
+#why-img {
+    width: 450px;
+    border-radius: 10px;
+}
+
+.why-mastermovers {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.why-mastermovers .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    margin: 10px 50px 10px;
+}
+
+.why-details {
+    text-align: end;
+    margin-right: 20px;
+}
+
+.why-details p {
+    font-size: 18px;
+}
+
+.apply {
+    display: flex;
+    padding: 20px
+}
+
+#business-apply {
+    background-image: url("../img/button.png");
+    background-color: transparent;
+    background-repeat: no-repeat;
+    color: white;
+    padding: 50px 60px 50px 65px;
+    font-size: 30px;
+    font-weight: 700;
+    border: 0;
+    margin: auto;
+}
+
+/*============== driver Page =====================*/
+#driverBanner {
+    background-image: url("../img/driver-banner.jpg");
+    height: 60vh;
+    width: 100%;
+    background-size: cover;
+    background-position: top 30% right 0;
+    padding: 0 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#driverBanner h1 {
+    font-size: 100px;
+    line-height: 100px;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px gray;
+    margin-bottom: 10px;
+}
+
+#driverBanner h2 {
+    color: white;
+    text-shadow: 2px 2px 4px gray;
+}
+
+#driverBanner h3 {
+    font-size: 30px;
+    color: white;
+    text-shadow: 2px 2px 4px gray;
+}
+
+#driverBanner h4 {
+    padding-bottom: 15px;
+    color: white;
+    text-shadow: 2px 2px 4px gray;
+}
+
+#driverBanner p {
+    color: white;
+    text-shadow: 2px 2px 4px gray;
+}
+
+.bakit-sect {
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.bakit-details {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 50px 10px;
+}
+
+.bakit-desc {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.bakit-desc p {
+    font-size: 18px;
+    text-align: center;
+}
+
+.bakit-sect .solid-business-header2 h2 {
+    font-size: 30px;
+}
+
+.bakit-img {
+    width: 220px;
+    height: 250px;
+    border-radius: 10px;
+}
+
+.paano-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-items: center;
+    align-items: center;
+}
+
+.paano-desc {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.paano-desc p {
+    font-size: 18px;
+}
+
+.paano-num {
+    font-size: 30px;
+    padding: 20px 30px;
+    background-color: #65AFE8;
+    border-radius: 40px;
+    margin: 10px;
+    color: white;
+}
+
+.paano-sect .solid-business-header h2 {
+    font-size: 28px;
+}
+
+#driver-apply {
+    background-image: url("../img/button.png");
+    background-color: transparent;
+    background-repeat: no-repeat;
+    color: white;
+    padding: 50px 60px 50px 65px;
+    font-size: 30px;
+    font-weight: 700;
+    border: 0;
+    margin: auto;
+}
+
+#driver-apply a {
+    text-decoration: none;
+    color: white;
+}
+
+/* About Us Page */
+
+#aboutUsBanner {
+    background-image: url("../img/aboutUs-banner.jpg");
+    height: 60vh;
+    width: 100%;
+    background-size: cover;
+    background-position: top 30% right 0;
+    padding: 0 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#aboutUsBanner h1 {
+    font-size: 80px;
+    line-height: 100px;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px gray;
+    margin-bottom: 10px;
+}
+
+#aboutUsBanner h2 {
+    color: white;
+    text-shadow: 2px 2px 4px gray;
+}
+
+#aboutUsBanner h3 {
+    font-size: 30px;
+    color: white;
+    text-shadow: 2px 2px 4px gray;
+}
+
+#aboutUsBanner h4 {
+    padding-bottom: 15px;
+    color: white;
+    text-shadow: 2px 2px 4px gray;
+}
+
+#aboutUsBanner p {
+    color: white;
+    text-shadow: 2px 2px 4px gray;
+}
+
+.about-intro {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 60px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.about-intro h4 {
+    font-size: 36px;
+    text-transform: uppercase;
+    color: black;
+}
+
+.title-left {
+    text-transform: uppercase;
+    font-size: 36px;
+    text-align: center;
+    margin-right: 60px;
+}
+
+.about-right p {
+    font-size: 25px;
+}
+
+.history-sect {
+    background-color: #064C81;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 50px;
+}
+
+.history-sect h3,
+.history-sect p {
+    color: white;
+}
+
+.innovating-sect {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 60px 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-right {
+    text-transform: uppercase;
+    font-size: 36px;
+    text-align: center;
+    margin-left: 60px;
+}
+
+.about-left p {
+    font-size: 25px;
+    text-align: end;
+
+}
+
+.innovating-sect h3,
+.innovating-sect p {
+    color: black;
+}
+
+.empowering-sect {
+    background-color: #E33530;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 50px;
+}
+
+.empowering-sect h3,
+.empowering-sect p {
+    color: white;
+}
+
+.vision-sect {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 60px 50px;
+    align-items: center;
+}
+
+.vision-sect h3,
+.vision-sect p {
+    color: black;
+}
+
+.mission-sect {
+    background-color: #064C81;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 50px;
+}
+
+.mission-sect h3,
+.mission-sect p,
+.mission-sect li {
+    color: white;
+}
+
+.mission-sect li {
+    font-size: 21px;
+}
+
+.core-sect {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 60px 50px;
+}
+
+.core-sect .about-left {
+    margin-right: 100px;
+}
+
+.core-sect h3 {
+    color: black;
+}
+
+/*=========== Apply Business & Apply Driver ==================*/
+.application-sect {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.form-container {
+
+    max-width: 700px;
+    width: 100%;
+    padding: 25px 30px;
+    background-color: #eecaca;
+}
+
+.form-container h4 {
+    margin-top: 10px;
+}
+
+.form-title {
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+}
+
+.form-title::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    background: #064C81;
+}
+
+.form-container form .form-details,
+.form-container form .form-busDetails,
+.form-container form .form-DriverDetails {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+}
+
+form .form-details .input-box,
+form .form-busDetails .input-box,
+form .form-busDetails .select-box,
+form .form-DriverDetails .input-box,
+form .form-DriverDetails .select-box {
+    margin-bottom: 15px;
+    width: calc(100% /2 -20px);
+}
+
+form .form-details .label-formdetails,
+form .form-busDetails .label-formdetails,
+form .form-DriverDetails .label-formdetails {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.form-details .input-box input,
+.form-busDetails .input-box input,
+.form-busDetails .select-box select,
+.form-DriverDetails .input-box input,
+.form-DriverDetails .select-box select {
+    height: 45px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 16px;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+
+.form-details .input-box input:focus,
+.form-details .input-box input:valid,
+.form-busDetails .input-box input:focus,
+.form-busDetails .input-box input:valid,
+.form-DriverDetails .input-box input:focus,
+.form-DriverDetails .input-box input:valid {
+    border-color: #E33530;
+}
+
+form .button {
+    height: 45px;
+    margin: 45px 0;
+}
+
+form .button input {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    background: linear-gradient(135deg, #064C81, #65AFE8);
+}
+
+form .button input:hover {
+    background: linear-gradient(-135deg, #064C81, #65AFE8);
+}
