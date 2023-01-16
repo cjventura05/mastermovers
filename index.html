@@ -5,451 +5,286 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/myStyle.css">
+    <title>Document</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <script src="assets/js/nav.js"></script>
-    <title>My Landing Page</title>
-    <link rel="icon" href="assets/img/MMLogo.png" type="image/png">
-
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="https://kit.fontawesome.com/ba9e5417e6.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
 </head>
 
 <body>
 
-    <header>
-        <div class="title">
-            <a href="#"><img src="assets/img/Main Logo.png" alt="mastermovers-logo" class="logo"></a>
-        </div>
-        <nav>
-            <a href="#" class="active">Home</a> <a href="webpages/aboutUs_page.html">About Us</a>
-            <a href="#">Privacy Policy</a>
-            <a href="#"><span class="material-icons">notifications</a>
-            <a href="#"><span class="material-icons">shopping_cart</a>
-            <a href="#"><span class="material-icons">bookmark</a>
-            <a href="webpages/myProfile.html"><span class="material-icons">person</a>
-            <button><span class="material-icons">menu</button>
-    </header>
-
-
-
-    <!--
+    <!-- Navigation Bar -->
     <nav class="navbar">
-        <ul>
-            <li class="navbar-logo"><img src="assets/img/Main Logo.png" alt=""></li>
-            <li class="navbar-toggle"><i class="fas fa-bars"></i></li>
-            <li class="navbar-links"><a href="#" class="active">Home</a></li>
-            <li class="navbar-links"><a href="#">About</a></li>
-            <li class="navbar-links"><a href="#">Privacy Policy</a></li>
-            <li class="navbar-links"><a href="#"><span class="wordLabel">Shopping Cart</span><span
-                        class="material-icons">shopping_cart</a></li>
-            <li class="navbar-links"><a href="#"><span class="wordLabel">Save Items</span><span
-                        class="material-icons">bookmark</a></li>
-            <li class="navbar-links"><a href="#"><span class="wordLabel">Profile</span><span
-                        class="material-icons">person</a></li>
-        </ul>
+        <div class="max-width">
+            <div class="logo"><a href="#"><img src="../assets/img/header-logo.png" alt=""></a></div>
+            <ul class="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#"><span class="wordLabel">Notifications</span><span
+                            class="material-icons">notifications</a></li>
+                <li><a href="#"><span class="wordLabel">Cart</span><span class="material-icons">shopping_cart</a></li>
+                <li><a href="#"><span class="wordLabel">Wishlists</span><span class="material-icons">bookmark</a></li>
+                <li><a href="#"><span class="wordLabel">Profile</span><span class="material-icons">person</a></li>
+            </ul>
+            <div class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
     </nav>
--->
-    <section id="landBanner">
-        <!--
-        <h4>Need Something Today?</h4>
-        <h2>Online Shopaholic Today</h2>-->
-        <h1>All your fave stuff, straight from our ka-MASTERshops</h1>
-        <h2>i-Master-kart mo na yan!</h2>
-        <button>Shop Now</button>
-    </section>
 
-    <section id="loc">
-        <form action="#" id="searchLocForm">
-            <input type="text" id="searchLoc" placeholder="Search Location">
-            <button id="locate"><span class="material-icons">location_on</span></button>
-        </form>
-    </section>
-
-    <section id="zone" class="section-p1">
-
-        <!--<div class="city-wrapper">
-           
-            <ul class="city-list">
-                <li>
-                    <a class="city" href="#">
-                        <div class="card">
-                            <img src="assets/img/Muntinlupa.jpg" alt="" class="img-place">
-                            <p class="caption">Muntinlupa</p>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a class="city" href="#">
-                        <div class="card">
-                            <img src="assets/img/luneta-park.jpg" alt="" class="img-place">
-                            <p class="caption">Manila</p>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a class="city" href="#">
-                        <div class="card">
-                            <img src="assets/img/las-pinas.jpg" alt="" class="img-place">
-                            <p class="caption">Las Piñas</p>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a class="city" href="#">
-                        <div class="card">
-                            <img src="assets/img/las-pinas.jpg" alt="" class="img-place">
-                            <p class="caption">Taguig</p>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a class="city" href="#">
-                        <div class="card">
-                            <img src="assets/img/Muntinlupa.jpg" alt="" class="img-place">
-                            <p class="caption">Pasig</p>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a class="city" href="#">
-                        <div class="card">
-                            <img src="assets/img/luneta-park.jpg" alt="" class="img-place">
-                            <p class="caption">Quezon</p>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a class="city" href="#">
-                        <div class="card">
-                            <img src="assets/img/luneta-park.jpg" alt="" class="img-place">
-                            <p class="caption">Laguna</p>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a class="city" href="#">
-                        <div class="card">
-                            <img src="assets/img/las-pinas.jpg" alt="" class="img-place">
-                            <p class="caption">Taguig</p>
-                        </div>
-                    </a>
-                </li>
-            </ul>
-        </div> -->
-
-        <!-- Design 2
-        <div class="wrapper-city">
-            <a href="" class="canvas">
-                <div class="canvas_img-wrapper">
-                    <img src="assets/img/las-pinas.jpg" alt="Las-Piñas" class="canvas-img">
-                </div>
-                <div class="canvas_copy canvas_copy--left">
-                    <span class="canvas_copy_subtitle">City</span>
-                    <strong class="canvas_copy_title">Las Piñas</strong>
-                    <span class="canvas_copy_details">The Gateway</span>
-                    <span class="canvas_copy_details">To South</span>
-                </div>
-            </a>
+    <!-- Home Section-->
+    <section class="home" id="home">
+        <div class="max-width">
+            <div class="home-content">
+                <div class="text-1">All your fave stuff: <span>Food</span></div>
+                <div class="text-2">Straight from our ka-MASTERshops</div>
+                <div class="text-3">i-Master-kart mo na yan!</span></div>
+                <a href="https://mastermovers.ph/">Shop Now</a>
+            </div>
         </div>
-        -->
+    </section>
 
-        <!--Design 3
-        <div class="city-wrapper">
-            <ul class="citylist">
-                <li>
-                    <div class="card transition">
-                        <h2 class="transition">Las Piñas City</h2>
-                        <p>Known nationwide for its bamboo organ, salt beds, and jeepney factories.</p>
-                        <div class="visit_container transition"><a href="#" class="vstore">Visit Stores</a></div>
-                        <div class="card_circle transition"></div>
+    <!-- Zone Section-->
+    <section class="about" id="about">
+        <div class="max-width">
+            <h2 class="title"></h2>
+        </div>
+
+        <div class="wrapper-grid">
+            <div class="card">
+                <img src="../assets/img/Muntinlupa.jpg" alt="" class="city_img">
+                <a href="#">
+                    <div class="face face1">
+                        <!--<h3>Muntinlupa</h3>-->
+                        <p>Text Desc Here</p>
                     </div>
-                </li>
-                <li>
-                    <div class="card transition">
-                        <h2 class="transition">Las Piñas City</h2>
-                        <p>Known nationwide for its bamboo organ, salt beds, and jeepney factories.</p>
-                        <div class="visit_container transition"><a href="#" class="vstore">Visit Stores</a></div>
-                        <div class="card_circle transition"></div>
+                    <div class="face face2nextline">
+                        <h3>Caloocan</h3>
                     </div>
-                </li>
-            </ul>
+                </a>
+            </div>
 
+            <div class="card">
+                <img src="../assets/img/las-pinas.jpg" alt="" class="city_img">
+                <a href="#">
+                    <div class="face face1">
+                        <!--<h3>Muntinlupa</h3>-->
+                        <p>best known for the bamboo organ housed in the St. Joseph Parish Church, the city is
+                            home to many other cultural artifacts.</p>
+                    </div>
+                    <div class="face face2">
+                        <h3>Las Piñas</h3>
+                    </div>
+                </a>
+            </div>
+
+            <div class="card">
+                <img src="../assets/img/las-pinas.jpg" alt="" class="city_img">
+                <a href="#">
+                    <div class="face face1">
+                        <!--<h3>Muntinlupa</h3>-->
+                        <p>Text Desc Here</p>
+                    </div>
+                    <div class="face face2nextline">
+                        <h3>Makati</h3>
+                    </div>
+                </a>
+            </div>
+
+            <div class="card">
+                <img src="../assets/img/Muntinlupa.jpg" alt="" class="city_img">
+                <a href="#">
+                    <div class="face face1">
+                        <!--<h3>Muntinlupa</h3>-->
+                        <p>Text Desc Here</p>
+                    </div>
+                    <div class="face face2">
+                        <h3>Malabon</h3>
+                    </div>
+                </a>
+            </div>
+
+            <div class="card">
+                <img src="../assets/img/Muntinlupa.jpg" alt="" class="city_img">
+                <a href="#">
+                    <div class="face face1">
+                        <!--<h3>Muntinlupa</h3>-->
+                        <p>Text Desc Here</p>
+                    </div>
+                    <div class="face face2nextline">
+                        <h3>Mandaluyong</h3>
+                    </div>
+                </a>
+            </div>
+
+            <div class="card">
+                <img src="../assets/img/Muntinlupa.jpg" alt="" class="city_img">
+                <a href="#">
+                    <div class="face face1">
+                        <!--<h3>Muntinlupa</h3>-->
+                        <p>Text Desc Here</p>
+                    </div>
+                    <div class="face face2">
+                        <h3>Manila</h3>
+                    </div>
+                </a>
+            </div>
+
+            <div class="card">
+                <img src="../assets/img/Muntinlupa.jpg" alt="" class="city_img">
+                <a href="#">
+                    <div class="face face1">
+                        <!--<h3>Muntinlupa</h3>-->
+                        <p>Text Desc Here</p>
+                    </div>
+                    <div class="face face2nextline">
+                        <h3>Marikina</h3>
+                    </div>
+                </a>
+            </div>
+
+            <div class="card">
+                <img src="../assets/img/Muntinlupa.jpg" alt="" class="city_img">
+                <a href="#">
+                    <div class="face face1">
+                        <!--<h3>Muntinlupa</h3>-->
+                        <p>Text Desc Here</p>
+                    </div>
+                    <div class="face face2">
+                        <h3>Muntinlupa</h3>
+                    </div>
+                </a>
+            </div>
+
+            <div class="card">
+                <img src="../assets/img/Muntinlupa.jpg" alt="" class="city_img">
+                <a href="#">
+                    <div class="face face1">
+                        <!--<h3>Muntinlupa</h3>-->
+                        <p>Text Desc Here</p>
+                    </div>
+                    <div class="face face2nextline">
+                        <h3>Navotas</h3>
+                    </div>
+                </a>
+            </div>
+
+            <div class="card">
+                <img src="../assets/img/Muntinlupa.jpg" alt="" class="city_img">
+                <a href="#">
+                    <div class="face face1">
+                        <!--<h3>Muntinlupa</h3>-->
+                        <p>Text Desc Here</p>
+                    </div>
+                    <div class="face face2">
+                        <h3>Parañaque</h3>
+                    </div>
+                </a>
+            </div>
+
+            <div class="card">
+                <img src="../assets/img/Muntinlupa.jpg" alt="" class="city_img">
+                <a href="#">
+                    <div class="face face1">
+                        <!--<h3>Muntinlupa</h3>-->
+                        <p>Text Desc Here</p>
+                    </div>
+                    <div class="face face2nextline">
+                        <h3>Pasay</h3>
+                    </div>
+                </a>
+            </div>
+
+            <div class="card">
+                <img src="../assets/img/Muntinlupa.jpg" alt="" class="city_img">
+                <a href="#">
+                    <div class="face face1">
+                        <!--<h3>Muntinlupa</h3>-->
+                        <p>Text Desc Here</p>
+                    </div>
+                    <div class="face face2">
+                        <h3>Pasig</h3>
+                    </div>
+                </a>
+            </div>
+
+            <div class="card">
+                <img src="../assets/img/Muntinlupa.jpg" alt="" class="city_img">
+                <a href="#">
+                    <div class="face face1">
+                        <!--<h3>Muntinlupa</h3>-->
+                        <p>Text Desc Here</p>
+                    </div>
+                    <div class="face face2nextline">
+                        <h3>Pateros</h3>
+                    </div>
+                </a>
+            </div>
+
+            <div class="card">
+                <img src="../assets/img/Muntinlupa.jpg" alt="" class="city_img">
+                <a href="#">
+                    <div class="face face1">
+                        <!--<h3>Muntinlupa</h3>-->
+                        <p>Text Desc Here</p>
+                    </div>
+                    <div class="face face2">
+                        <h3 class="long">Quezon</h3>
+                        <h3>City</h3>
+                    </div>
+                </a>
+            </div>
+
+            <div class="card">
+                <img src="../assets/img/Muntinlupa.jpg" alt="" class="city_img">
+                <a href="#">
+                    <div class="face face1">
+                        <!--<h3>Muntinlupa</h3>-->
+                        <p>Text Desc Here</p>
+                    </div>
+                    <div class="face face2nextline">
+                        <h3>San Juan</h3>
+                    </div>
+                </a>
+            </div>
+
+            <div class="card">
+                <img src="../assets/img/Muntinlupa.jpg" alt="" class="city_img">
+                <a href=" #">
+                    <div class="face face1">
+                        <!--<h3>Muntinlupa</h3>-->
+                        <p>Text Desc Here</p>
+                    </div>
+                    <div class="face face2">
+                        <h3>Taguig</h3>
+                    </div>
+                </a>
+            </div>
+
+            <div class="card">
+                <img src="../assets/img/Muntinlupa.jpg" alt="" class="city_img">
+                <a href="#">
+                    <div class="face face1">
+                        <!--<h3>Muntinlupa</h3>-->
+                        <p>Text Desc Here</p>
+                    </div>
+                    <div class="face face2nextline">
+                        <h3>Valenzuela</h3>
+                    </div>
+                </a>
+            </div>
         </div>
--->
-
-        <div class="head2">
-            <h2>MASTERS ARE ON THE MOVE ON THESE AREAS:</h2>
-        </div>
-
-        <div class="city-wrap">
-            <ul class="city-list">
-                <li>
-                    <a href="#">
-                        <div class="card">
-                            <img src="assets/img/Muntinlupa.jpg" alt="" class="city_img">
-                            <div class="face face1">
-                                <!--<h3>Muntinlupa</h3>-->
-                                <p>Text Desc Here</p>
-                            </div>
-                            <div class="face face2nextline">
-                                <h3>Caloocan</h3>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#">
-                        <div class="card">
-                            <img src="assets/img/las-pinas.jpg" alt="" class="city_img">
-                            <div class="face face1">
-                                <!--<h3>Muntinlupa</h3>-->
-                                <p>best known for the bamboo organ housed in the St. Joseph Parish Church, the city is
-                                    home to many other cultural artifacts.</p>
-                            </div>
-                            <div class="face face2">
-                                <h3>Las Piñas</h3>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#">
-                        <div class="card">
-                            <img src="assets/img/las-pinas.jpg" alt="" class="city_img">
-                            <div class="face face1">
-                                <!--<h3>Muntinlupa</h3>-->
-                                <p>Text Desc Here</p>
-                            </div>
-                            <div class="face face2nextline">
-                                <h3>Makati</h3>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#">
-                        <div class="card">
-                            <img src="assets/img/Muntinlupa.jpg" alt="" class="city_img">
-                            <div class="face face1">
-                                <!--<h3>Muntinlupa</h3>-->
-                                <p>Text Desc Here</p>
-                            </div>
-                            <div class="face face2">
-                                <h3>Malabon</h3>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#">
-                        <div class="card">
-                            <img src="assets/img/Muntinlupa.jpg" alt="" class="city_img">
-                            <div class="face face1">
-                                <!--<h3>Muntinlupa</h3>-->
-                                <p>Text Desc Here</p>
-                            </div>
-                            <div class="face face2nextline">
-                                <h3>Mandaluyong</h3>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#">
-                        <div class="card">
-                            <img src="assets/img/Muntinlupa.jpg" alt="" class="city_img">
-                            <div class="face face1">
-                                <!--<h3>Muntinlupa</h3>-->
-                                <p>Text Desc Here</p>
-                            </div>
-                            <div class="face face2">
-                                <h3>Manila</h3>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#">
-                        <div class="card">
-                            <img src="assets/img/Muntinlupa.jpg" alt="" class="city_img">
-                            <div class="face face1">
-                                <!--<h3>Muntinlupa</h3>-->
-                                <p>Text Desc Here</p>
-                            </div>
-                            <div class="face face2nextline">
-                                <h3>Marikina</h3>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#">
-                        <div class="card">
-                            <img src="assets/img/Muntinlupa.jpg" alt="" class="city_img">
-                            <div class="face face1">
-                                <!--<h3>Muntinlupa</h3>-->
-                                <p>Text Desc Here</p>
-                            </div>
-                            <div class="face face2">
-                                <h3>Muntinlupa</h3>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#">
-                        <div class="card">
-                            <img src="assets/img/Muntinlupa.jpg" alt="" class="city_img">
-                            <div class="face face1">
-                                <!--<h3>Muntinlupa</h3>-->
-                                <p>Text Desc Here</p>
-                            </div>
-                            <div class="face face2nextline">
-                                <h3>Navotas</h3>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#">
-                        <div class="card">
-                            <img src="assets/img/Muntinlupa.jpg" alt="" class="city_img">
-                            <div class="face face1">
-                                <!--<h3>Muntinlupa</h3>-->
-                                <p>Text Desc Here</p>
-                            </div>
-                            <div class="face face2">
-                                <h3>Parañaque</h3>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#">
-                        <div class="card">
-                            <img src="assets/img/Muntinlupa.jpg" alt="" class="city_img">
-                            <div class="face face1">
-                                <!--<h3>Muntinlupa</h3>-->
-                                <p>Text Desc Here</p>
-                            </div>
-                            <div class="face face2nextline">
-                                <h3>Pasay</h3>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#">
-                        <div class="card">
-                            <img src="assets/img/Muntinlupa.jpg" alt="" class="city_img">
-                            <div class="face face1">
-                                <!--<h3>Muntinlupa</h3>-->
-                                <p>Text Desc Here</p>
-                            </div>
-                            <div class="face face2">
-                                <h3>Pasig</h3>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#">
-                        <div class="card">
-                            <img src="assets/img/Muntinlupa.jpg" alt="" class="city_img">
-                            <div class="face face1">
-                                <!--<h3>Muntinlupa</h3>-->
-                                <p>Text Desc Here</p>
-                            </div>
-                            <div class="face face2nextline">
-                                <h3>Pateros</h3>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#">
-                        <div class="card">
-                            <img src="assets/img/Muntinlupa.jpg" alt="" class="city_img">
-                            <div class="face face1">
-                                <!--<h3>Muntinlupa</h3>-->
-                                <p>Text Desc Here</p>
-                            </div>
-                            <div class="face face2">
-                                <h3>Quezon City</h3>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#">
-                        <div class="card">
-                            <img src="assets/img/Muntinlupa.jpg" alt="" class="city_img">
-                            <div class="face face1">
-                                <!--<h3>Muntinlupa</h3>-->
-                                <p>Text Desc Here</p>
-                            </div>
-                            <div class="face face2nextline">
-                                <h3>San Juan</h3>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-
-                <li>
-                    <a href=" #">
-                        <div class="card">
-                            <img src="assets/img/Muntinlupa.jpg" alt="" class="city_img">
-                            <div class="face face1">
-                                <!--<h3>Muntinlupa</h3>-->
-                                <p>Text Desc Here</p>
-                            </div>
-                            <div class="face face2">
-                                <h3>Taguig</h3>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#">
-                        <div class="card">
-                            <img src="assets/img/Muntinlupa.jpg" alt="" class="city_img">
-                            <div class="face face1">
-                                <!--<h3>Muntinlupa</h3>-->
-                                <p>Text Desc Here</p>
-                            </div>
-                            <div class="face face2nextline">
-                                <h3>Valenzuela</h3>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-
-            </ul>
-        </div>
-
     </section>
 
+    <!---->
     <section class="why">
         <h2>In a Budol Mood? Let the Masters take care of it!</h2>
         <article>
             <div class="art-img">
-                <img src="/assets/img/user.png" alt="">
+                <img src="/assets/img/24-7.png" alt="">
             </div>
             <div class="art-details">
                 <h4>24/7 Delivery</h4>
@@ -461,7 +296,7 @@
         </article>
         <article>
             <div class="art-img">
-                <img src="/assets/img/user.png" alt="">
+                <img src="/assets/img/shop.png" alt="">
             </div>
             <div class="art-details">
                 <h4>Variety of Shops</h4>
@@ -475,7 +310,7 @@
         </article>
         <article>
             <div class="art-img">
-                <img src="/assets/img/user.png" alt="">
+                <img src="/assets/img/transaction.png" alt="">
             </div>
             <div class="art-details">
                 <h4>Secure Transactions</h4>
@@ -486,7 +321,7 @@
         </article>
         <article>
             <div class="art-img">
-                <img src="/assets/img/user.png" alt="">
+                <img src="/assets/img/locations.png" alt="">
             </div>
             <div class="art-details">
                 <h4>Real-Time Tracking</h4>
@@ -497,7 +332,7 @@
         </article>
         <article>
             <div class="art-img">
-                <img src="/assets/img/user.png" alt="">
+                <img src="/assets/img/shopping-cart.png" alt="">
             </div>
             <div class="art-details">
                 <h4>A Seamless Shopping Experience</h4>
@@ -510,43 +345,39 @@
         </article>
     </section>
 
-    <section id="join" class="section-p1">
+    <section id="apply" class="apply">
         <div class="solid-header">
             <h2>Be One of the Masters</h2>
         </div>
+
         <div class="partner-wrapper">
-            <ul class="join-list">
-                <li><a href="webpages/business_page.html" class="join-text">
-                        <div class="join-card">
-                            <figure class="img-join">
-                                <img src="assets/img/business.jpg" alt="hands-held-together">
-                            </figure>
-                            <figcaption class="solid-text">
-                                <h3>For Businesses</h3>
-                            </figcaption>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="webpages/driver_page.html" class="join-text">
-                        <div class="join-card">
-                            <figure class="img-join">
-                                <img src="assets/img/rider.jpg" alt="rider">
-                            </figure>
-                            <figcaption class="solid-text">
-                                <h3>For Rider</h3>
-                            </figcaption>
-                        </div>
-                    </a>
-                </li>
-            </ul>
+            <div class="join-card">
+                <a href="webpages/business_page.html" class="join-text">
+                    <figure class="img-join">
+                        <img src="../assets/img/Main Logo.png" alt="hands-held-together">
+                    </figure>
+                    <figcaption class="solid-text">
+                        <h3>For Businesses</h3>
+                    </figcaption>
+                </a>
+            </div>
+
+            <div class="join-card">
+                <a href="webpages/driver_page.html" class="join-text">
+                    <figure class="img-join">
+                        <img src="../assets/img/Main Logo.png" alt="rider">
+                    </figure>
+                    <figcaption class="solid-text">
+                        <h3>For Rider</h3>
+                    </figcaption>
+                </a>
+            </div>
         </div>
     </section>
 
-    <section id="download-section">
-        <!-- <div class="upper"></div> -->
+    <section id="quote" class="quote">
         <div class="img-wrapper">
-            <img src="assets/img/hand-smartphone-with-logo.png" alt="hand-holding-smartphone" class="extended-img">
+            <img src="../assets/img/hand-smartphone-with-logo.png" alt="hand-holding-smartphone" class="extended-img">
         </div>
 
         <div class="download-info">
@@ -554,66 +385,57 @@
             <h4>Find your next tipid-sulit purchase at i-Master-kart mo na yan! Go ahead, download us.</h4>
             <div class="appstore">
                 <a href="https://play.google.com/store/apps/details?id=com.mastermovers.buyer" target="_blank"><img
-                        src="assets/img/google-play-button.png" alt=""></a>
+                        src="../assets/img/google-play-button.png" alt=""></a>
                 <a href="https://apps.apple.com/ph/app/mastermovers-sme-app/id1659207289" target="_blank"><img
-                        src="assets/img/app-store-button.png" alt=""></a>
+                        src="../assets/img/app-store-button.png" alt=""></a>
             </div>
         </div>
     </section>
 
     <footer>
-        <div class="wrapper">
-            <img src="assets/img/Main Logo.png" alt="" class="footer-logo">
+        <div class="logo-wrapper">
+            <img src="../assets/img/Main Logo.png" alt="" class="footer-logo">
         </div>
-        <div class="MM-links">
-            <div class="download-links">
-                <h3>Click to Download</h3>
-                <div class="app-footer">
-                    <a href="https://play.google.com/store/apps/details?id=com.mastermovers.buyer" target="_blank"><img
-                            src="assets/img/google-play-button.png" alt="" class="google-play-img"></a>
-                    <a href="https://apps.apple.com/ph/app/mastermovers-sme-app/id1659207289" target="_blank"><img
-                            src="assets/img/app-store-button.png" alt="" class="app-store-img"></a>
-                </div>
+
+        <div class="links">
+            <h3>Click to Download</h3>
+            <div class="applink">
+                <a href="https://play.google.com/store/apps/details?id=com.mastermovers.buyer" target="_blank"><img
+                        src="../assets/img/google-play-button.png" alt=""></a>
+                <a href="https://apps.apple.com/ph/app/mastermovers-sme-app/id1659207289" target="_blank"><img
+                        src="../assets/img/app-store-button.png" alt=""></a>
             </div>
-            <div class="socmed-link">
-                <h3>Follow Us</h3>
-                <div class="icon-links">
-                    <a href="https://www.facebook.com/mastermoversph" target="_blank">
-                        <img src="assets/img/facebook-logo.png" alt="" class="socmed-icon">
-                    </a>
-                    <a href="https://www.facebook.com/mastermoversph" target="_blank">
-                        <img src="assets/img/logo-tiktok-icon.png" alt="" class="socmed-icon">
-                    </a>
-                    <a href="https://www.facebook.com/mastermoversph" target="_blank">
-                        <img src="assets/img/twitter-logo.png" alt="" class="socmed-icon">
-                    </a>
-                    <a href="https://www.facebook.com/mastermoversph" target="_blank">
-                        <img src="assets/img/instagram-logo.png" alt="" class="socmed-icon">
-                    </a>
-                    <a href="https://www.facebook.com/mastermoversph" target="_blank">
-                        <img src="assets/img/Youtube-logo.png" alt="" class="socmed-icon">
-                    </a>
-                </div>
+            <h3>Follow Us</h3>
+            <div class="soclink">
+                <a href="https://www.facebook.com/mastermoversph" target="_blank">
+                    <img src="../assets/img/facebook-logo.png" alt="">
+                </a>
+                <a href="https://www.facebook.com/mastermoversph" target="_blank">
+                    <img src="../assets/img/logo-tiktok-icon.png" alt="">
+                </a>
+                <a href="https://www.facebook.com/mastermoversph" target="_blank">
+                    <img src="../assets/img/twitter-logo.png" alt="">
+                </a>
+                <a href="https://www.facebook.com/mastermoversph" target="_blank">
+                    <img src="../assets/img/instagram-logo.png" alt="">
+                </a>
+                <a href="https://www.facebook.com/mastermoversph" target="_blank">
+                    <img src="../assets/img/Youtube-logo.png" alt="">
+                </a>
             </div>
         </div>
 
-        <div class="my-account-panel">
-            <h4>My Account</h4>
-            <a href="#">Profile</a>
-            <a href="#">Address</a>
-            <a href="#">My Orders</a>
-        </div>
-        <div class="quick-links-panel">
-            <h4>Quick Links</h4>
-            <a href="#">Contact Us</a>
+        <div class="quick-links">
+            <h3>Quick Links</h3>
             <a href="../webpages/aboutUs_page.html">About Us</a>
             <a href=" #">Careers</a>
+            <a href="#">Contact Us</a>
             <a href="#">Privacy Policy</a>
             <a href="#">Terms & Conditions</a>
         </div>
     </footer>
 
-    <script src="assets/js/myScript.js"></script>
+    <script src="/assets/js/script.js"></script>
 </body>
 
 </html>
